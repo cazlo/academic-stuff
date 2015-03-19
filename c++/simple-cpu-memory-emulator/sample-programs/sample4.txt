@@ -1,0 +1,61 @@
+//Program which prints a message
+
+//instr
+.0
+1	//load ASCII for A	//0
+65						//1
+9	//print A			//2
+2						//3
+23	//jal printL		//4
+200						//5
+23	//one more L		//6
+200						//7
+23	//jal printSpace	//8
+100						//9
+1	//load D			//10
+68
+9
+2
+1	//load O
+79
+9
+2
+1	//load N
+78
+9
+2
+1	//load E
+69
+9
+2
+1	//load !
+33
+9
+2
+1	//load newline
+10
+9	//print it
+2
+50	//DONE!
+
+.100	//here be the space function
+1	//load ASCII for space	//100
+32							//101
+9	//print space			//102
+2							//103
+24	//jr $ra				//104
+
+.200	//print L
+1	//load ASCII for L	//200
+76						//201
+9	//print L			//202
+2						//203
+24	//jr $ra			//204
+
+//timed interrupt
+.1000
+30	//just return
+
+//system interrupt
+.1500
+30	//just return

@@ -1,0 +1,80 @@
+Welcome to DrRacket, version 5.3.4 [3m].
+Language: racket; memory limit: 128 MB.
+> (my-reverse '(2 6 3 7))
+'(7 3 6 2)
+> (my-reverse '(2 6 "foo" 7))
+'(7 "foo" 6 2)
+> (my-reverse (list 1 2))
+'(2 1)
+> (my-map sqrt '(9 25 81 49))
+'(3 5 9 7)
+> (my-map add1 '(6 4 8 3))
+'(7 5 9 4)
+> (my-map add1 '())
+'()
+> (function-3 sqrt)
+1.7320508075688772
+> (function-3 log)
+1.0986122886681098
+> (function-3 add1)
+4
+> (zipper '(1 2 3 4) '(a b c d))
+'((1 a) (2 b) (3 c) (4 d))
+> (zipper '() '())
+'()
+> (zipper '(12 3) '(4 9 5 7))
+'((12 4) (3 9))
+> (segregate '(7 2 3 5 8))
+'((2 8) (7 3 5))
+> (segregate '(3 -5 8 16 99))
+'((8 16) (3 -5 99))
+> (segregate '())
+'(() ())
+> (in-list? 6 '(4 8 6 2 1))
+#t
+> (in-list? 7 '(4 8 6 2 1))
+#f
+> (in-list? "foo" '(4 5 #f "foo" a))
+#t
+> (sorted? '(2 5 6 9 11 34))
+. . sorted?: undefined;
+ cannot reference an identifier before its definition
+> (my-sorted? '(2 5 6 9 11 34))
+#t
+> (my-sorted? '("alpha" "beta" "gamma"))
+#t
+> (my-sorted? '(2 5 6 9 34 11))
+#f
+> (my-sorted? '("john" "zack" "bob"))
+#f
+> (flatten '(1))
+'(1)
+> (flatten '((1 2) 3))
+'(1 2 3)
+> (flatten '(((4 3) 6)((7 2 9)(5 1))))
+'(4 3 6 7 2 9 5 1)
+> (threshold '(3 6.2 7 2 9 5.3 1) 6)
+'(3 2 5.3 1)
+> (threshold '(1 2 3 4 5) 4)
+'(1 2 3)
+> (threshold '(3 6.2 7 2 9 5.3 1) 6.1)
+'(3 2 5.3 1)
+> (threshold '(8 3 5 7) 2)
+'()
+> (value-at '(4 7 9) 0)
+4
+> (value-at '(4 7 9) 1)
+7
+> (value-at '(4 7 9) 2)
+9
+> (value-at '(4 7 9) 3)
+"index out of bounds"
+> (rev-sort '(4 3 6 7 2 9 5 1))
+'(9 7 6 5 4 3 2 1)
+> (rev-sort '(3 2 1))
+'(3 2 1)
+> (rev-sort '(23))
+'(23)
+> (rev-sort '())
+'()
+> 

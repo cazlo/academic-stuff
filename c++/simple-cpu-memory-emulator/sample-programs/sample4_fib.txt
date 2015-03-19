@@ -1,0 +1,74 @@
+//Program which computes the fibonacci number of a random number 
+//(from one to one hundred)
+
+//instr
+.0
+1	//load ASCII for #
+35
+9	//print #
+2
+1	//load ASCII for :
+58
+9	//print :
+2
+1	//load ASCII for space
+32
+9	//print space
+2
+8	//get random # into AC
+9	//print it
+1
+7	//save random # to address 500
+499
+1	//load newline
+10
+9	//print it
+2
+20	//jump to fib function
+100
+
+//fib(1) = fib(2) = 1
+//y = current iteration 
+.100	//here be the fib function
+1								//100
+1	//AC = 1					//101
+15  //Y = AC = 1				//102
+2								//103
+499 //AC = fib number to solve
+13	//AC = AC - Y
+21  //jump to exit if AC = 0 [(AC - current iteration == 0) -> finished iterating]
+200
+//else
+17	//copy from Y to AC
+14	//copy from AC to X
+25	//X++
+15	//copy from X to AC
+16	//copy from AC to Y
+
+.200	//the exit function
+23
+300	//call 'fib(#)=' function
+5	//load the result at address 500+y into AC
+500
+9	//print it
+2
+50
+
+.300	//the function which prints the word "fib(#)="
+//TODO
+24	//return
+
+//data
+.500
+0	//address 499 = fib number to solve
+0	//address 500 = fib(0)
+1	//address 501 = fib(1)
+1	//address 502 = fib(2)
+
+//timed interrupt
+.1000
+30	//just return
+
+//system interrupt
+.1500
+30	//just return

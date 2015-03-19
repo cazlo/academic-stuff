@@ -1,0 +1,17 @@
+AUTHOR: Andrew Paettie
+CLASS: CS 4390.001 Computer Networks
+DESCRIPTION: Readme for project
+
+About project:
+For project description see the pdfs in the doc folder.
+
+Environment Setup:
+You should extract the zip containing this file to some folder (let's call it <root>) in a unix environment such as cs2.utdallas.edu.  To setup the environment for this program, simply change directory to the <root> folder.
+
+Compiling:
+I have provided a fancy compile script which does it for you.  Run it with /bin/sh compile.sh
+If you don't want to run this, you can follow the following manual steps.
+1) javac -d . simpleNetworkSim/*.java
+
+Running:
+I have supplied a sample script called scenario.sh.  This script removes old channel and log files, then creates nodes for the 3 different test scenarios posted.  Just comment/ uncomment lines to suit test scenario needs. There is a lot of debug info produced by each node, so if you choose not to use this script exactly, I would recommend still redirecting standard out to a log file.
